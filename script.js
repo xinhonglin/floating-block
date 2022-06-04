@@ -226,7 +226,22 @@ Game.prototype.initControl = function(){
     _this.control[evt.key] = false
     //console.log(_this.control)
   }) 
+
+  $(window).on("tap",function(evt){
+    
+    //中括號代表設定屬性值
+    _this.control[evt.key] = true
+    //console.log(_this.control)
+  })
+  
+  // $(window).keyup(function(evt){
+  //   _this.control[evt.key] = false
+  //   //console.log(_this.control)
+  // }) 
+  
 }
+
+
 
 
 //開始遊戲
