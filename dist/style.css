@@ -1,0 +1,158 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.scence {
+  width: 500px;
+  height: 300px;
+  background-color: #222;
+  position: relative;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+}
+.scence.day_mode {
+  background-color: #fff;
+  border-color: #222;
+}
+.scence .score {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: 0.5s;
+  color: white;
+}
+.scence .score.scoreD {
+  color: #222;
+}
+.scence .score .grade, .scence .score .high {
+  z-index: 1;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.scence .score .high {
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 20px;
+}
+.scence .score .high.highD {
+  color: rgba(0, 0, 0, 0.4);
+}
+.scence .score .grade {
+  margin-right: 10px;
+}
+.scence .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  z-index: 2;
+  user-select: none;
+  text-align: center;
+}
+.scence .info.infoD {
+  color: #222;
+}
+.scence .info button {
+  border: none;
+  background-color: #222;
+  color: white;
+  border: 1px solid;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.scence .info button:hover {
+  background-color: white;
+  color: #222;
+}
+.scence .infoText {
+  position: relative;
+}
+.scence .title {
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.scence .square, .scence .square1 {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 0px 30px white;
+  border-radius: 3px;
+}
+.scence .square.squareD, .scence .square1.squareD {
+  background-color: #222;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+}
+.scence .square1 {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  position: absolute;
+  right: -35px;
+  top: -35px;
+}
+.scence .squ_ani {
+  animation: squAni 3s infinite;
+}
+@keyframes squAni {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.scence .square.rotate {
+  transform: rotate(360deg);
+}
+.scence .tubes {
+  position: relative;
+}
+.scence .tubes .tubeT, .scence .tubes .tubeB {
+  position: absolute;
+  background-color: #535353;
+  left: 0;
+}
+.scence .tubes .tubeT {
+  top: 0;
+}
+.scence .tubes .tubeB {
+  bottom: 0;
+}
+
+.des {
+  position: absolute;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  bottom: 10px;
+  letter-spacing: 2px;
+  opacity: 0;
+}
