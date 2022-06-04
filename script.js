@@ -225,20 +225,8 @@ Game.prototype.initControl = function(){
   $(window).keyup(function(evt){
     _this.control[evt.key] = false
     //console.log(_this.control)
+  
   }) 
-
-  $(window).on("tap",function(evt){
-    
-    //中括號代表設定屬性值
-    _this.control[evt.key] = true
-    //console.log(_this.control)
-  })
-  
-  // $(window).keyup(function(evt){
-  //   _this.control[evt.key] = false
-  //   //console.log(_this.control)
-  // }) 
-  
 }
 
 
@@ -319,8 +307,19 @@ Game.prototype.startGameMain = function(){
     if(_this.control[" "]){
       //square.$el.addClass("rotate")
       square.position.y-=5
+    } 
+    
+    $(window).on("tap",function(evt){
+      square.position.y-=5
+    })
+
+
+    if(_this.control[" "]){
+      //square.$el.addClass("rotate")
+      square.position.y-=5
       
-    }      
+    } 
+
     else{
       //square.$el.removeClass("rotate")
       square.position.y+=5
